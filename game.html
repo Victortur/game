@@ -14,6 +14,7 @@
 
 <body>
 
+
     <script>
         // Inicialización de Kaboom
         kaboom();
@@ -209,6 +210,10 @@
         // Escena de victoria
         scene("win", ({ time, boss }) => {
 
+            onClick(() => {
+                go("battle"); // Volver a la escena principal
+            });
+
             add([
                 sprite("background"),
 
@@ -217,7 +222,7 @@
 
             // Agregar texto de felicitaciones y mostrar los objetos colisionados
             add([
-                text("Enhorabuena! Has dormido toda la noche", time.toFixed(2), 24),
+                text("Enhorabuena! Has dormido toda la noche, estos han sido tus sueños:", { size: 20 }),
                 anchor("center"),
                 pos(width() / 2, height() / 2),
             ])
@@ -231,12 +236,40 @@
 
             ]);
 
+            // Añadir el texto
+            const resumeText = add([
+                text("CLICK para reanudar la partida ", { size: 30 }),
+                anchor("center"),
+                pos(width() / 2, height() / 2 + 200),
+            ]);
+
+            // Función para hacer que el texto parpadee
+            function blinkText() {
+                // Hacer visible el texto
+                resumeText.hidden = false;
+                // Ocultar el texto después de un corto período de tiempo
+                wait(0.5, () => {
+                    resumeText.hidden = true;
+                    // Llamar a la función nuevamente después de un tiempo para continuar el parpadeo
+                    wait(0.5, () => {
+                        blinkText();
+                    });
+                });
+            }
+
+            // Iniciar el parpadeo del texto
+            blinkText();
+
             // Limpiar la lista de objetos colisionados
             collidedObjects = [];
 
         })
 
         scene("lose", () => {
+
+            onClick(() => {
+                go("battle"); // Volver a la escena principal
+            });
 
             add([
                 sprite("background"),
@@ -245,7 +278,7 @@
 
 
             add([
-                text("¡Has perdido!", { size: 48 }),
+                text("¡te ha despertado una pesadilla! Estos han sido tus sueños: ", { size: 20 }),
                 anchor("center"),
                 pos(width() / 2, height() / 2),
             ]);
@@ -256,6 +289,30 @@
                 pos(width() / 2, height() / 2 + 50),
                 anchor("center"),
             ]);
+
+            // Añadir el texto
+            const resumeText = add([
+                text("CLICK para reanudar la partida ", { size: 30 }),
+                anchor("center"),
+                pos(width() / 2, height() / 2 + 200),
+            ]);
+
+            // Función para hacer que el texto parpadee
+            function blinkText() {
+                // Hacer visible el texto
+                resumeText.hidden = false;
+                // Ocultar el texto después de un corto período de tiempo
+                wait(0.5, () => {
+                    resumeText.hidden = true;
+                    // Llamar a la función nuevamente después de un tiempo para continuar el parpadeo
+                    wait(0.5, () => {
+                        blinkText();
+                    });
+                });
+            }
+
+            // Iniciar el parpadeo del texto
+            blinkText();
 
             // Limpiar la lista de objetos colisionados
             collidedObjects = [];
