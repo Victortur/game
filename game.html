@@ -18,14 +18,14 @@
     <script>
         // Inicialización de Kaboom
         kaboom();
-        loadSprite("background", "/assets/sprites/fondo.png");
+        loadSprite("background", "assets/sprites/fondo.png");
 
-        loadSprite("albor", "/assets/sprites/albor.png");
+        loadSprite("albor", "assets/sprites/albor.png");
 
         // Cargar las imágenes de los nuevos objetos
-        loadSprite("pesadilla", "/assets/sprites/pesadilla.png");
-        loadSprite("recurrente", "/assets/sprites/recurrente.png");
-        loadSprite("sanador", "/assets/sprites/sanador.png");
+        loadSprite("pesadilla", "assets/sprites/pesadilla.png");
+        loadSprite("recurrente", "assets/sprites/recurrente.png");
+        loadSprite("sanador", "assets/sprites/sanador.png");
         // Definición de los nombres de los objetos
         const objs = [
             "pesadilla",
@@ -35,7 +35,7 @@
 
         // Cargar las imágenes de los objetos
         for (const obj of objs) {
-            loadSprite(obj, `/assets/sprites/${obj}.png`, {});
+            loadSprite(obj, `assets/sprites/${obj}.png`, {});
         }
 
         // Cargar los sonidos
