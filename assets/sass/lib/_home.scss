@@ -7,10 +7,7 @@
     font-weight: 200;
 }
 
-* {
-
-
-}
+* {}
 
 .gogame {
     color: rgb(224, 224, 224);
@@ -21,6 +18,7 @@
     text-decoration: none;
     margin-left: 50px;
 }
+
 .gogame1 {
     color: rgb(224, 224, 224);
     font-family: "Montserrat", sans-serif;
@@ -36,13 +34,27 @@
 .seccion1 {
     color: rgb(224, 224, 224);
     margin: 50px;
-
+    @media (max-width: 670px) {
+        .seccion1 {
+            margin: 20px;
+        }
+    }
 
     .titulo {
         color: rgb(207, 227, 250);
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
         font-size: 83px;
+    }
+    @media (max-width: 870px) {
+        .titulo {
+            font-size: 60px;
+        }
+    }
+    @media (max-width: 670px) {
+        .titulo {
+            font-size: 30px;
+        }
     }
 
     .descripcion {
@@ -52,7 +64,18 @@
         font-weight: 200;
         font-size: 13px;
     }
+    @media (max-width: 870px) {
+        .descripcion {
+            width: 600px;
+        }
+    }
+    @media (max-width: 670px) {
+        .descripcion {
+            width: 300px;
+        }
+    }
 }
+
 
 .seccion2 {
     display: flex;
@@ -78,12 +101,14 @@
     font-weight: 200;
     font-size: 13px;
     margin: 0px 50px 50px 50px;
-    .tituloSueños{
+
+    .tituloSueños {
         display: flex;
         justify-content: center;
         font-size: 30px;
         font-weight: 500;
     }
+
     .sueñosExplicacion {
         display: flex;
         flex-direction: row;
@@ -95,11 +120,13 @@
 
         .recurrentes {
             padding: 0px 30px;
-            .fotoSueños{
+
+            .fotoSueños {
                 display: flex;
                 justify-content: center;
             }
-            .tituloSueño{
+
+            .tituloSueño {
                 font-weight: 400;
                 font-size: 17px;
                 display: flex;
@@ -109,11 +136,13 @@
 
         .sanadores {
             padding: 0px 30px;
-            .fotoSueños{
+
+            .fotoSueños {
                 display: flex;
                 justify-content: center;
             }
-            .tituloSueño{
+
+            .tituloSueño {
                 font-weight: 400;
                 font-size: 17px;
                 display: flex;
@@ -123,16 +152,26 @@
 
         .pesadillas {
             padding: 0px 30px;
-            .fotoSueños{
+
+            .fotoSueños {
                 display: flex;
                 justify-content: center;
             }
-            .tituloSueño{
+
+            .tituloSueño {
                 font-weight: 400;
                 font-size: 17px;
                 display: flex;
                 justify-content: center;
             }
         }
+
     }
+    @media (max-width: 670px) {
+        .sueñosExplicacion {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 }

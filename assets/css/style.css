@@ -31,11 +31,26 @@
   color: rgb(224, 224, 224);
   margin: 50px;
 }
+@media (max-width: 670px) {
+  .seccion1 .seccion1 {
+    margin: 20px;
+  }
+}
 .seccion1 .titulo {
   color: rgb(207, 227, 250);
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
   font-size: 83px;
+}
+@media (max-width: 870px) {
+  .seccion1 .titulo {
+    font-size: 60px;
+  }
+}
+@media (max-width: 670px) {
+  .seccion1 .titulo {
+    font-size: 30px;
+  }
 }
 .seccion1 .descripcion {
   color: rgb(207, 227, 250);
@@ -43,6 +58,16 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 13px;
+}
+@media (max-width: 870px) {
+  .seccion1 .descripcion {
+    width: 600px;
+  }
+}
+@media (max-width: 670px) {
+  .seccion1 .descripcion {
+    width: 300px;
+  }
 }
 
 .seccion2 {
@@ -120,4 +145,10 @@
   font-size: 17px;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 670px) {
+  .sueños .sueñosExplicacion {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
