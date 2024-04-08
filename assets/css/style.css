@@ -5,15 +5,30 @@
   font-weight: 200;
 }
 
+* {
+  border: 1px solid red;
+}
+
 .gogame {
   color: rgb(224, 224, 224);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 50px;
-  display: flex;
-  justify-content: center;
   margin-top: 50px;
   text-decoration: none;
+  margin-left: 50px;
+}
+
+.gogame1 {
+  color: rgb(224, 224, 224);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-left: 50px;
 }
 
 .seccion1 {
